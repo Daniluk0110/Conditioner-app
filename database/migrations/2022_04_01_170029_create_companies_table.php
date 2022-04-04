@@ -22,7 +22,12 @@ return new class extends Migration
         });
 
         Schema::table('products', function (Blueprint $table) {
-           $table->foreignId('company_id')->after('usd_price')->references('id')->on('companies');
+           $table->foreignId('company_id')
+               ->nullable()
+               ->after('usd_price')
+               ->references('id')
+               ->on('companies')
+               ->onDelete('set null');
         });
     }
 

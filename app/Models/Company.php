@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Company extends Model
 {
     use SoftDeletes;
+
+    protected $guarded = ['id'];
+
+    public function product()
+    {
+        $this->belongsTo(Product::class);
+    }
 }

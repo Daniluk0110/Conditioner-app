@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('product_property', function (Blueprint $table) {
-            $table->foreignId('product_id')->references('id')->on('products');
-            $table->foreignId('property_id')->references('id')->on('properties');
-            $table->string('value');
+            $table->id();
+            $table->foreignId('product_id')->references('id')->on('products')->cascadeOnDelete();
+            $table->foreignId('property_id')->references('id')->on('properties')->cascadeOnDelete();
+            $table->string('value')->nullable();
         });
     }
 
