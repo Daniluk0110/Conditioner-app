@@ -33,10 +33,10 @@ Route::get('/about', function () {
    return view();
 });
 
-Route::group(['prefix' => '/admin'], function () {
+Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
 
     Route::get('/', function () {
-        return 'index page in admin';
+        return view('admin.index');
     });
 
     Route::resources([
@@ -44,7 +44,7 @@ Route::group(['prefix' => '/admin'], function () {
         '/companies' => \App\Models\Company::class,
         '/properties' => \App\Models\Property::class,
     ]);
-})->middleware(['auth']);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
