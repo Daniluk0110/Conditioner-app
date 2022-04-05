@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\CompanyAdminController;
+use App\Http\Controllers\Admin\ProductAdminController;
+use App\Http\Controllers\Admin\PropertyAdminController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,18 +21,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/products', function () {
-   return view();
-});
-
-Route::get('/products/{id}/detail', function () {
-   return view();
-});
-
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products/{id}', [ProductController::class, 'show']);
 Route::get('/prices', function () {
    return view();
 });
-
 Route::get('/about', function () {
    return view();
 });
@@ -40,9 +37,9 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
     });
 
     Route::resources([
-        '/products' => \App\Models\Product::class,
-        '/companies' => \App\Models\Company::class,
-        '/properties' => \App\Models\Property::class,
+        '/products' => ProductAdminController::class,
+        '/companies' => CompanyAdminController::class,
+        '/properties' => PropertyAdminController::class,
     ]);
 });
 
