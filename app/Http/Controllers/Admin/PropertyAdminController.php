@@ -14,7 +14,7 @@ class PropertyAdminController extends Controller
 
     public function create()
     {
-
+        return view('admin.properties.create');
     }
 
     public function store()

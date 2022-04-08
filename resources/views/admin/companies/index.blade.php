@@ -20,7 +20,9 @@
         <div class="container-fluid">
             <!-- Main row -->
             <div class="row">
-
+                <div class="col-4">
+                    <a href="/admin/companies/create" class="btn btn-block btn-primary">Add new company</a>
+                </div>
             </div>
             <!-- /.row (main row) -->
         </div><!-- /.container-fluid -->
