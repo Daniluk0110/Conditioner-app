@@ -69,9 +69,15 @@
                                                 <td>{{ $property->description }}</td>
                                                 <td>{{ $property->updated_at }}</td>
                                                 <td>
-                                                    <a class="p-2" href="#"><i class="fas fa-pen"></i></a>
-                                                    <a class="p-2" href="#"><i class="fas fa-eye"></i></a>
-                                                    <a class="p-2" href="#"><i class="fas fa-trash"></i></a>
+                                                    <a class="p-2" href="/admin/properties/{{ $property->id }}/edit">
+                                                        <i class="fas fa-pen"></i>
+                                                    </a>
+                                                    <a class="p-2" href="/admin/properties/{{ $property->id }}">
+                                                        <i class="fas fa-eye"></i>
+                                                    </a>
+                                                    <a class="p-2" href="/admin/properties/{{ $property->id }}">
+                                                        <i class="fas fa-trash"></i>
+                                                    </a>
                                                 </td>
                                             </tr>
                                         @endforeach

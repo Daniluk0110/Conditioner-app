@@ -30,9 +30,13 @@ class CompanyAdminController extends Controller
         return redirect('/admin/companies');
     }
 
-    public function show()
+    public function show(Company $company)
     {
+        if (!$company) {
+            return back();
+        }
 
+        return view('admin.companies.show', compact('company'));
     }
 
     public function edit()

@@ -31,9 +31,13 @@ class PropertyAdminController extends Controller
         return redirect('/admin/properties');
     }
 
-    public function show()
+    public function show(Property $property)
     {
+        if (!$property) {
+            return back();
+        }
 
+        return view('admin.properties.show', compact('property'));
     }
 
     public function edit()
