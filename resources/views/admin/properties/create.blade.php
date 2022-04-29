@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Properties</h1>
+                    <h1 class="m-0">Добавление нового свойства</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -21,7 +21,21 @@
             <!-- Main row -->
             <div class="row">
                 <div class="col-4">
-                    <a href="/admin/properties/create" class="btn btn-block btn-primary">Add new property</a>
+                    <form action="#">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Название свойства</label>
+                                <input name="name" type="text" class="form-control" placeholder="Введите название">
+                            </div>
+                            <div class="form-group">
+                                <label>Описание свойства</label>
+                                <textarea name="description" class="form-control" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/admin/properties/create" type="submit" class="btn btn-primary">Создать</a>
+                        </div>
+                    </form>
                 </div>
             </div>
             <!-- /.row (main row) -->
