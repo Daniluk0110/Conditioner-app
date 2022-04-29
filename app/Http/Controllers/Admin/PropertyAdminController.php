@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\PropertyRequest;
+use App\Models\Property;
 use Illuminate\Http\Request;
 
 class PropertyAdminController extends Controller
@@ -17,9 +19,9 @@ class PropertyAdminController extends Controller
         return view('admin.properties.create');
     }
 
-    public function store()
+    public function store(PropertyRequest $request)
     {
-
+        dd($request->all());
     }
 
     public function show()

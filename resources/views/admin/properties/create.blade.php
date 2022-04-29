@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Добавление нового свойства</h1>
+                    <h1 class="m-0">Добавление нового свойства для кондиционеров</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -21,7 +21,8 @@
             <!-- Main row -->
             <div class="row">
                 <div class="col-4">
-                    <form action="#">
+                    <form action="/admin/properties" method="POST">
+                        @CSRF
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Название свойства</label>
@@ -33,7 +34,7 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="/admin/properties/create" type="submit" class="btn btn-primary">Создать</a>
+                            <input type="submit" class="btn btn-primary" value="Создать">
                         </div>
                     </form>
                 </div>
