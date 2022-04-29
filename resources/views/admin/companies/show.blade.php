@@ -21,9 +21,26 @@
                 <!-- Main row -->
                 <div class="row">
                     <div class="col-12">
-                        <div>id: {{ $company->id }}</div>
-                        <div> Название: {{ $company->name }}</div>
-                        <div>Описание: <p>{{ $company->description }}</p></div>
+                        <div class="card">
+                            <div class="card-body table-responsive p-0">
+                                <table class="table table-hover text-nowrap">
+                                    <tbody>
+                                    <tr>
+                                        <td>ID</td>
+                                        <td>{{ $company->id }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Название</td>
+                                        <td>{{ $company->name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Описание</td>
+                                        <td>{{ $company->description }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
