@@ -10,7 +10,9 @@ class CompanyAdminController extends Controller
 {
     public function index()
     {
-        return view('admin.companies.index');
+        $companies = Company::all();
+
+        return view('admin.companies.index', compact('companies'));
     }
 
     public function create()
@@ -20,7 +22,6 @@ class CompanyAdminController extends Controller
 
     public function store(CompanyRequest $request)
     {
-        dd($request->all());
         Company::firstOrCreate([
             'name' => $request->get('name'),
             'description' => $request->get('description'),

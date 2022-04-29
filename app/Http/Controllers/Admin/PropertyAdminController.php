@@ -11,7 +11,9 @@ class PropertyAdminController extends Controller
 {
     public function index()
     {
-        return view('admin.properties.index');
+        $properties = Property::all();
+
+        return view('admin.properties.index', compact('properties'));
     }
 
     public function create()
