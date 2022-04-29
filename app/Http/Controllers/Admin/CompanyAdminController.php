@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\Admin\CompanyRequest;
+use App\Models\Company;
 
 class CompanyAdminController extends Controller
 {
@@ -17,9 +18,15 @@ class CompanyAdminController extends Controller
         return view('admin.companies.create');
     }
 
-    public function store()
+    public function store(CompanyRequest $request)
     {
+        dd($request->all());
+        Company::firstOrCreate([
+            'name' => $request->get('name'),
+            'description' => $request->get('description'),
+        ]);
 
+        return redirect('/admin/companies');
     }
 
     public function show()
