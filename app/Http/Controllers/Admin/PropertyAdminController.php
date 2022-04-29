@@ -21,7 +21,10 @@ class PropertyAdminController extends Controller
 
     public function store(PropertyRequest $request)
     {
-        Property::firstOrCreate(['name' => $request->get('name')]);
+        Property::firstOrCreate([
+            'name' => $request->get('name'),
+            'description' => $request->get('description') ?: null,
+        ]);
 
         return redirect('/admin/properties');
     }

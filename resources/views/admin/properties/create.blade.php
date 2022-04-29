@@ -27,6 +27,13 @@
                             <div class="form-group">
                                 <label>Название свойства</label>
                                 <input name="name" type="text" class="form-control" placeholder="Введите название">
+                                @error('name')
+                                    <div class="text-danger">
+                                        Это поле обязательное!
+                                        <br>
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label>Описание свойства</label>
