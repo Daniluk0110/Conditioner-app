@@ -95,11 +95,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- /.card-body -->
                 </div>
             </div>
         </section>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
 @endsection
