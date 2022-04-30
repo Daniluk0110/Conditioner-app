@@ -40,14 +40,17 @@ class PropertyAdminController extends Controller
         return view('admin.properties.show', compact('property'));
     }
 
-    public function edit()
+    public function edit(Property $property)
     {
 
+        return view('admin.properties.edit', compact('property'));
     }
 
-    public function update()
+    public function update(PropertyRequest $request, Property $property)
     {
+        $property->update($request->all());
 
+        return view('admin.properties.edit', compact('property'));
     }
 
     public function destroy()

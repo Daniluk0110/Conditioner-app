@@ -39,14 +39,16 @@ class CompanyAdminController extends Controller
         return view('admin.companies.show', compact('company'));
     }
 
-    public function edit()
+    public function edit(Company $company)
     {
-
+        return view('admin.companies.edit', compact('company'));
     }
 
-    public function update()
+    public function update(CompanyRequest $request, Company $company)
     {
+        $company->update($request->all());
 
+        return view('admin.company.edit', compact('company'));
     }
 
     public function destroy()
