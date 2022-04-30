@@ -7,8 +7,11 @@
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 d-flex ml-2">
                         <h1 class="m-0">Детальная информация о компании</h1>
+                        <a class="p-2" href="/admin/properties/{{ $property->id }}/edit">
+                            <i class="fas fa-pen"></i>
+                        </a>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->

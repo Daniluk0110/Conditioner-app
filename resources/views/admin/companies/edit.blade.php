@@ -23,7 +23,7 @@
                     <div class="col-12">
                         <form action="/admin/companies/{{ $company->id }}" method="POST">
                             @CSRF
-                            @method('PUT')
+                            @method('PATCH')
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>ID: </label>

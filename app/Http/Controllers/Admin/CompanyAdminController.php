@@ -11,7 +11,6 @@ class CompanyAdminController extends Controller
     public function index()
     {
         $companies = Company::all();
-
         return view('admin.companies.index', compact('companies'));
     }
 
@@ -47,12 +46,12 @@ class CompanyAdminController extends Controller
     public function update(CompanyRequest $request, Company $company)
     {
         $company->update($request->all());
-
         return view('admin.company.edit', compact('company'));
     }
 
-    public function destroy()
+    public function destroy(Company $company)
     {
-
+        $company->delete();
+        return redirect('admin.companies.index');
     }
 }

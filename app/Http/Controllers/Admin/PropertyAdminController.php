@@ -12,7 +12,6 @@ class PropertyAdminController extends Controller
     public function index()
     {
         $properties = Property::all();
-
         return view('admin.properties.index', compact('properties'));
     }
 
@@ -42,19 +41,18 @@ class PropertyAdminController extends Controller
 
     public function edit(Property $property)
     {
-
         return view('admin.properties.edit', compact('property'));
     }
 
     public function update(PropertyRequest $request, Property $property)
     {
         $property->update($request->all());
-
         return view('admin.properties.edit', compact('property'));
     }
 
-    public function destroy()
+    public function destroy(Property $property)
     {
-
+        $property->delete();
+        return redirect('admin/properties');
     }
 }

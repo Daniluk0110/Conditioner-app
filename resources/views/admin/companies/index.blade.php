@@ -72,12 +72,20 @@
                                                     <a class="p-2" href="/admin/companies/{{ $company->id }}/edit">
                                                         <i class="fas fa-pen"></i>
                                                     </a>
+                                                </td>
+                                                <td>
                                                     <a class="p-2" href="/admin/companies/{{ $company->id }}">
                                                         <i class="fas fa-eye"></i>
                                                     </a>
-                                                    <a class="p-2" href="/admin/companies/{{ $company->id }}">
-                                                        <i class="fas fa-trash"></i>
-                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <form action="/admin/companies/{{ $company->id }}" method="POST">
+                                                        @CSRF
+                                                        @method('DELETE')
+                                                        <button type="submit" class="border-0 bg-white">
+                                                            <i class="fas fa-trash text-danger" role="button"></i>
+                                                        </button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         @endforeach
