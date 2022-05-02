@@ -26,18 +26,17 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Название свойства</label>
-                                <input name="name" type="text" class="form-control" placeholder="Введите название">
+                                <input name="name" type="text" class="form-control" placeholder="Введите название" value="{{ old('name') }}">
                                 @error('name')
-                                    <div class="text-danger">
-                                        Это поле обязательное!
-                                        <br>
-                                        {{ $message }}
-                                    </div>
+                                    <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Описание свойства</label>
-                                <textarea name="description" class="form-control" cols="30" rows="10"></textarea>
+                                <textarea name="description" class="form-control" cols="30" rows="10">{{ old('description') }}</textarea>
+                                @error('description')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
                         <div class="card-footer">

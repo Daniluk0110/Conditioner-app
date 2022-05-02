@@ -3,13 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\Admin\Product\StoreRequest;
+use App\Http\Requests\Admin\Product\UpdateRequest;
+use App\Models\Product;
 
 class ProductAdminController extends Controller
 {
     public function index()
     {
-        return view('admin.products.index');
+        $products = Product::all();
+        return view('admin.products.index', compact('products'));
     }
 
     public function create()
@@ -17,28 +20,40 @@ class ProductAdminController extends Controller
         return view('admin.products.create');
     }
 
-    public function store()
+    public function store(StoreRequest $request)
     {
+        dd($request->all());
+        Product::firstOrCreate([
+            'name' => $request->get('name'),
+            'description' => $request->get('description'),
+        ]);
 
+        return redirect('/admin/products');
     }
 
-    public function show()
+    public function show(Product $product)
     {
+        if (!$product) {
+            return back();
+        }
 
+        return view('admin.products.show', compact('product'));
     }
 
-    public function edit()
+    public function edit(Product $product)
     {
-
+        return view('admin.products.edit', compact('product'));
     }
 
-    public function update()
+    public function update(UpdateRequest $request, Product $product)
     {
-
+        $product->update($request->all());
+        return view('admin.products.edit', compact('product'));
     }
 
-    public function destroy()
+    public function destroy(Product $product)
     {
-
+        $product->delete();
+        return redirect('admin.products.index');
     }
 }

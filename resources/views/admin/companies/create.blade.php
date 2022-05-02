@@ -27,7 +27,7 @@
                                 <div class="form-group">
                                     <label>Название компании*</label>
                                     <input name="name" type="text" class="form-control"
-                                           placeholder="Введите название компании">
+                                           placeholder="Введите название компании" value="{{ old('name') }}">
                                     @error('name')
                                     <div class="text-danger">
                                         {{ $message }}
@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Описание</label>
-                                    <textarea name="description" class="form-control"></textarea>
+                                    <textarea name="description" class="form-control">{{ old('description') }}</textarea>
                                     @error('description')
                                     <div class="text-danger">
                                         {{ $message }}
