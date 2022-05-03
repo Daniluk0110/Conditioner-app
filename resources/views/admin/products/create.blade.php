@@ -36,8 +36,7 @@
                                         <div class="form-group">
                                             <label>Компания</label>
                                             <select name="company" class="form-control" required >
-                                                <option disabled>Выберите компанию:</option>
-                                                <option>--</option>
+                                                <option>Выберите компанию:</option>
                                                 @foreach($companies as $company)
                                                     <option value="{{ $company->id }}">{{ $company->name }}</option>
                                                 @endforeach

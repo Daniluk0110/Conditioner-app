@@ -38,8 +38,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Описание</label>
-                                    <textarea name="description" class="form-control" cols="30"
-                                              rows="10">{{ $product->description }}</textarea>
+                                    <textarea id="summernote" name="description">{{ $product->description }}</textarea>
                                     @error('description')
                                     <div class="text-danger">{{ $message }}</div>
                                     @enderror

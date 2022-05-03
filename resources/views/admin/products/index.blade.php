@@ -64,7 +64,7 @@
                                             <tr class="odd">
                                                 <td>{{ $product->id }}</td>
                                                 <td>{{ $product->name }}</td>
-                                                <td>{{ $product->description }}</td>
+                                                <td>{!! $product->description !!}</td>
                                                 <td>{{ $product->updated_at }}</td>
                                                 <td>
                                                     <a class="p-2" href="/admin/products/{{ $product->id }}/edit">
