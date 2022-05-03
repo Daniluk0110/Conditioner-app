@@ -38,7 +38,7 @@
                                     </tr>
                                     <tr>
                                         <td>Описание</td>
-                                        <td>{{ $property->description }}</td>
+                                        <td>{!! $property->description !!}</td>
                                     </tr>
                                     </tbody>
                                 </table>

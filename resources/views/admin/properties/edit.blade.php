@@ -41,8 +41,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Описание свойства</label>
-                                    <textarea name="description" class="form-control" cols="30"
-                                              rows="10">{{ $property->description }}</textarea>
+                                    <textarea id="summernote" name="description">{{ $property->description }}</textarea>
                                 </div>
                             </div>
                             <div class="card-footer">

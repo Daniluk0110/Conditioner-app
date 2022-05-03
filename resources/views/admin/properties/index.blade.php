@@ -64,7 +64,7 @@
                                             <tr class="odd">
                                                 <td>{{ $property->id }}</td>
                                                 <td>{{ $property->name }}</td>
-                                                <td>{{ $property->description }}</td>
+                                                <td>{!! $property->description !!}</td>
                                                 <td>{{ $property->updated_at }}</td>
                                                 <td>
                                                     <a class="p-2" href="/admin/properties/{{ $property->id }}/edit">

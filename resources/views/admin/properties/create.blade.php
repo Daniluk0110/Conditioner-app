@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Описание свойства</label>
-                                <textarea name="description" class="form-control" cols="30" rows="10">{{ old('description') }}</textarea>
+                                <textarea id="summernote" name="description">{{ old('description') }}</textarea>
                                 @error('description')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
