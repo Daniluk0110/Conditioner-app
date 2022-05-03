@@ -20,7 +20,7 @@
                 <!-- Main row -->
                 <div class="row">
                     <div class="col-10">
-                        <form action="/admin/products" method="POST">
+                        <form action="/admin/products" method="POST" enctype="multipart/form-data">
                             @CSRF
                             <div class="card-body">
                                 <div class="form-group">
@@ -38,11 +38,11 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputFile">Загрузка превью изображения</label>
+                                    <label>Загрузка превью изображения</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" id="exampleInputFile">
-                                            <label class="custom-file-label" for="exampleInputFile">Выберите файл</label>
+                                            <input type="file" class="custom-file-input" name="preview_image">
+                                            <label class="custom-file-label">Выберите файл</label>
                                         </div>
                                         <div class="input-group-append">
                                             <span class="input-group-text">Загрузить</span>
