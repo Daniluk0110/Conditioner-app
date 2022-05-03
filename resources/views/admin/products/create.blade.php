@@ -25,14 +25,32 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Название кондиционера</label>
-                                    <input name="name" type="text" class="form-control" value="{{ old('name') }}" placeholder="Введите название">
+                                    <input name="name" type="text" class="form-control" value="{{ old('name') }}"
+                                           placeholder="Введите название">
                                     @error('name')
                                     <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label>Компания</label>
+                                            <select name="company" class="form-control" required >
+                                                <option disabled>Выберите компанию:</option>
+                                                <option>--</option>
+                                                @foreach($companies as $company)
+                                                    <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                                @endforeach
+                                            </select>
+                                            @error('company')
+                                            <div class="text-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <label>Описание</label>
-                                    <textarea id="summernote" name="description">{{ old('description') }}" </textarea>
+                                    <textarea id="summernote" name="description">{{ old('description') }}</textarea>
                                     @error('description')
                                     <div class="text-danger">{{ $message }}</div>
                                     @enderror

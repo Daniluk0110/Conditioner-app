@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Product\StoreRequest;
 use App\Http\Requests\Admin\Product\UpdateRequest;
+use App\Models\Company;
 use App\Models\Product;
+use App\Models\Property;
 
 class ProductAdminController extends Controller
 {
@@ -17,7 +19,10 @@ class ProductAdminController extends Controller
 
     public function create()
     {
-        return view('admin.products.create');
+        $companies = Company::all();
+        $properties = Property::all();
+
+        return view('admin.products.create', compact('companies', 'properties'));
     }
 
     public function store(StoreRequest $request)
