@@ -26,7 +26,7 @@
                         <div class="form-group">
                             <label>Название кондиционера</label>
                             <input name="name" type="text" class="form-control" value="{{ old('name') }}"
-                                   placeholder="Введите название">
+                                   placeholder="Введите название" required>
                             @error('name')
                             <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -51,7 +51,7 @@
                                     <label>Загрузка превью изображения</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" name="preview_image">
+                                            <input required type="file" class="custom-file-input" name="preview_image">
                                             <label class="custom-file-label">Выберите файл</label>
                                         </div>
                                         <div class="input-group-append">
