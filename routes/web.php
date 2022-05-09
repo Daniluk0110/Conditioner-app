@@ -18,8 +18,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('website.home');
 });
+Route::get('/prices', function () {
+    return view('website.prices');
+});
+Route::get('/about', function () {
+    return view('website.about');
+});
+//Route::get('/products', function () {
+//    return view('website.products');
+//});
+//Route::get('/products/{id}', function () {
+//    return view('website.product_detail');
+//});
 
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{id}', [ProductController::class, 'show']);
