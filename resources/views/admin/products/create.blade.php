@@ -18,8 +18,6 @@
         <section class="content">
             <div class="container-fluid">
                 <!-- Main row -->
-
-
                 <form action="/admin/products" method="POST" enctype="multipart/form-data">
                     @CSRF
                     <div class="card-body">
@@ -38,10 +36,12 @@
                                     <select name="company_id" class="form-control" required>
                                         <option>Выберите компанию:</option>
                                         @foreach($companies as $company)
-                                            <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                            <option value="{{ $company->id }}"
+                                                {{ $company->id == old('company_id') ? 'selected' : '' }}
+                                            >{{ $company->name }}</option>
                                         @endforeach
                                     </select>
-                                    @error('company')
+                                    @error('company_id')
                                     <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>

@@ -27,6 +27,7 @@ class StoreRequest extends FormRequest
             'name' => 'required|string|min:2',
             'description' => 'required|string|min:2',
             'preview_image' => 'required|file',
+            'company_id' => 'required|exists:companies,id',
         ];
     }
 }

@@ -33,7 +33,8 @@ class ProductAdminController extends Controller
         Product::firstOrCreate([
             'name' => $request->get('name'),
             'description' => $request->get('description'),
-            'preview_image' => $imagePath
+            'preview_image' => $imagePath,
+            'company_id' => $request->get('company_id')
         ]);
 
         return redirect('/admin/products');
