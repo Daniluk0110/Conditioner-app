@@ -1,7 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <title>Shoppers &mdash; Colorlib e-Commerce Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="yandex-verification" content="a841398eea77709b" />
+
+    <meta content='Магазин Кондиционеров Климат Контроль в Барановичах, в Несвиже, В Новогрудке, в Слониме, в Берёзе, в Ляховичах' name="keywords">
+    <meta content='Магазин Климат Контроль – мы предлагаем купить кондиционер в Барановичах, в Ляховичах, в Несвиже, в Новогрудке, в Берёзе, в Слониме по выгодням ценам. Оформим заказ, привезём и установим!' name="description">
+    <meta content="index,follow" name="robots">
+    <meta content="website" property="og:type">
+    <meta content="https://klimatkontrol.by/" property="og:url">
+    <meta content="Магазин Кондиционеров klimatkontrol" property="og:title">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZTHG6ZWP4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VZTHG6ZWP4');
+    </script>
+
+    <title>Кондиционеры</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
