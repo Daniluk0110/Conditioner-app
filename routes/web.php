@@ -26,21 +26,9 @@ Route::get('/prices', function () {
 Route::get('/about', function () {
     return view('website.about');
 });
-//Route::get('/products', function () {
-//    return view('website.products');
-//});
-//Route::get('/products/{id}', function () {
-//    return view('website.product_detail');
-//});
 
-Route::get('/products', [ProductController::class, 'index']);
-Route::get('/products/{id}', [ProductController::class, 'show']);
-Route::get('/prices', function () {
-   return view();
-});
-Route::get('/about', function () {
-   return view();
-});
+//Route::get('/products', [ProductController::class, 'index']);
+//Route::get('/products/{id}', [ProductController::class, 'show']);
 
 Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
 
