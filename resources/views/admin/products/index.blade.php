@@ -51,6 +51,12 @@
                                             <th class="sorting sorting_asc">
                                                 Название
                                             </th>
+                                            <th class="sorting sorting_asc">
+                                                Цена
+                                            </th>
+                                            <th class="sorting sorting_asc">
+                                                Картинка
+                                            </th>
                                             <th class="sorting">
                                                 Описание
                                             </th>
@@ -64,6 +70,8 @@
                                             <tr class="odd">
                                                 <td>{{ $product->id }}</td>
                                                 <td>{{ $product->name }}</td>
+                                                <td>{{ $product->usd_price }}</td>
+                                                <td><img class="img-fluid img" src="{{ storage_path($product->preview_image) }}" alt=""></td>
                                                 <td>{!! $product->description !!}</td>
                                                 <td>{{ $product->updated_at }}</td>
                                                 <td>
