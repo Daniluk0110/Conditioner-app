@@ -22,21 +22,42 @@
                     @CSRF
                     <div class="card-body">
                         <div class="form-group">
-                            <label>Название кондиционера</label>
-                            <input name="name" type="text" class="form-control" value="{{ old('name') }}"
-                                   placeholder="Введите название" required>
-                            @error('name')
-                            <div class="text-danger">{{ $message }}</div>
-                            @enderror
-                            <label class="m-2">Цена в $:</label>
-                            <input type="text" name="price" class="form-control" value="{{ old('price') }}"
-                                   placeholder="Введите цену" required>
-                            @error('price')
-                            <div class="text-danger">{{ $message }}</div>
-                            @enderror
+                            <div class="col-6">
+                                <label>Название кондиционера</label>
+                                <input name="name" type="text" class="form-control" value="{{ old('name') }}"
+                                       placeholder="Введите название" required>
+                                @error('name')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="col-6">
+                                <label class="m-2">Цена в $:</label>
+                                <input type="text" name="price" class="form-control" value="{{ old('price') }}"
+                                       placeholder="Введите цену" required>
+                                @error('price')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-4">
+                        <div class="row m-2">
+                            <div class="col-1">
+                                <div class="form-group">
+                                    <label>Наличие</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name=stock checked="" value="1">
+                                        <label class="form-check-label">В наличии</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="stock" value="0">
+                                        <label class="form-check-label">Нет в наличии</label>
+                                    </div>
+
+                                    @error('company_id')
+                                    <div class="text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-4">
                                 <div class="form-group">
                                     <label>Компания</label>
                                     <select name="company_id" class="form-control" required>

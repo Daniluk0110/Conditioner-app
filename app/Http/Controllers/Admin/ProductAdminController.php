@@ -32,7 +32,9 @@ class ProductAdminController extends Controller
 
         Product::firstOrCreate([
             'name' => $request->get('name'),
+            'stock' => $request->get('stock'),
             'description' => $request->get('description'),
+            'usd_price' => $request->get('price'),
             'preview_image' => $imagePath,
             'company_id' => $request->get('company_id')
         ])
