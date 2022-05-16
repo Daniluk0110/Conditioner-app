@@ -28,6 +28,12 @@
                             @error('name')
                             <div class="text-danger">{{ $message }}</div>
                             @enderror
+                            <label class="m-2">Цена в $:</label>
+                            <input type="text" name="price" class="form-control" value="{{ old('price') }}"
+                                   placeholder="Введите цену" required>
+                            @error('price')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="row">
                             <div class="col-sm-4">
@@ -93,13 +99,13 @@
                                             <td>{{ $property->name }}</td>
                                             <td>
                                                 <input type="text"
-                                                       value="{{old('property_text_id[' . $property->id . ']')}}"
-                                                       name="property_text_id[{{ $property->id }}]">
+                                                       value="{{old('property_ids[' . $property->id . '][value]')}}"
+                                                       name="property_ids[{{ $property->id }}][value]">
                                             </td>
                                             <td>
                                                 <input type="text"
-                                                       value="{{old('property_float_id[' . $property->id . ']')}}"
-                                                       name="property_float_id[{{ $property->id }}]">
+                                                       value="{{old('property_ids[' . $property->id . '][float_value]')}}"
+                                                       name="property_ids[{{ $property->id }}][float_value]">
                                             </td>
                                         </tr>
                                     @endforeach

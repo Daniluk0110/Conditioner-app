@@ -28,10 +28,8 @@ class StoreRequest extends FormRequest
             'description' => 'required|string|min:2',
             'preview_image' => 'required|file',
             'company_id' => 'required|integer|exists:companies,id',
-            'property_text_ids' => 'nullable|array',
-            'property_text_ids.*' => 'nullable',
-            'property_float_ids' => 'nullable|array',
-            'property_float_ids.*' => 'nullable|integer',
+            'property_ids' => 'nullable|array',
+            'property_ids.*' => 'nullable',
         ];
     }
 }
