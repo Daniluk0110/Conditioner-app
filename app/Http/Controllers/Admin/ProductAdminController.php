@@ -27,7 +27,8 @@ class ProductAdminController extends Controller
 
     public function store(StoreRequest $request)
     {
-        $imagePath = \Storage::put('/images', $request['preview_image']);
+        \Storage::put('public/images/', $request['preview_image']);
+        $imagePath = \Storage::put('images/', $request['preview_image']);
         $properties = $request->get('property_ids');
 
         Product::firstOrCreate([
