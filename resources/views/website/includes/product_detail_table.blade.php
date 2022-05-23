@@ -200,7 +200,7 @@
             <td>Larry</td>
         </tr>
         <tr>
-            <td>Дезодорирование </td>
+            <td>Дезодорирование</td>
             <td>Larry</td>
         </tr>
         <tr>
