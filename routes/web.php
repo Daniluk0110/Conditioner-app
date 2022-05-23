@@ -26,13 +26,8 @@ Route::get('/prices', function () {
 Route::get('/about', function () {
     return view('website.about');
 });
-Route::get('/products', function () {
-    return view('website.about');
-});
-Route::get('/products/{product}', []);
-
-//Route::get('/products', [ProductController::class, 'index']);
-//Route::get('/products/{id}', [ProductController::class, 'show']);
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products/{product}', [ProductController::class, 'show']);
 
 Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function () {
 
