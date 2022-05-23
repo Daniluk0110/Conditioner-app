@@ -56,7 +56,20 @@ class ProductAdminController extends Controller
 
     public function edit(Product $product)
     {
-        return view('admin.products.edit', compact('product'));
+        $companies = Company::all();
+        $properties = \DB::table('products')
+            ->select([
+                'properties.id',
+                'properties.name',
+                'product_property.value',
+                'product_property.float_value',
+            ])
+            ->leftJoin('product_property', 'product_property.product_id', 'products.id')
+            ->leftJoin('properties', 'properties.id', 'product_property.property_id')
+            ->where('products.id', $product->id)
+            ->get();
+
+        return view('admin.products.edit', compact('product', 'companies', 'properties'));
     }
 
     public function update(UpdateRequest $request, Product $product)
