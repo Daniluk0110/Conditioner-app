@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <div class="col-6">
                                 <label>Название кондиционера</label>
-                                <input name="name" type="text" class="form-control" value="{{ $product->id }}"
+                                <input name="name" type="text" class="form-control" value="{{ $product->name }}"
                                        placeholder="Введите название" required>
                                 @error('name')
                                 <div class="text-danger">{{ $message }}</div>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-6">
                                 <label class="m-2">Цена в $:</label>
-                                <input type="text" name="price" class="form-control" value="{{ $product->price }}"
+                                <input type="text" name="price" class="form-control" value="{{ $product->usd_price }}"
                                        placeholder="Введите цену" required>
                                 @error('price')
                                 <div class="text-danger">{{ $message }}</div>
@@ -85,7 +85,6 @@
                                             <span class="input-group-text">Загрузить</span>
                                         </div>
                                     </div>
-                                    <img class="img-fluid img" src="{{ asset('storage/' . $product->preview_image) }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -137,7 +136,7 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <input type="submit" class="btn btn-primary" value="Создать">
+                        <input type="submit" class="btn btn-primary" value="Сохранить">
                     </div>
                 </form>
             </div>

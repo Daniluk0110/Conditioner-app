@@ -50,8 +50,18 @@ class ProductAdminController extends Controller
         if (!$product) {
             return back();
         }
+        $product->company = Company::where('id', $product->company_id)->first()->name;
+        $properties = \DB::table('products')
+            ->select([
+                'properties.name',
+                'product_property.value',
+            ])
+            ->leftJoin('product_property', 'product_property.product_id', 'products.id')
+            ->leftJoin('properties', 'properties.id', 'product_property.property_id')
+            ->where('products.id', $product->id)
+            ->get();
 
-        return view('admin.products.show', compact('product'));
+        return view('admin.products.show', compact('product', 'properties'));
     }
 
     public function edit(Product $product)
@@ -74,8 +84,20 @@ class ProductAdminController extends Controller
 
     public function update(UpdateRequest $request, Product $product)
     {
-        $product->update($request->all());
-        return view('admin.products.edit', compact('product'));
+        $properties = $request->get('property_ids');
+
+        $product->update([
+            'name' => $request->get('name'),
+            'stock' => $request->get('stock'),
+            'description' => $request->get('description'),
+            'usd_price' => $request->get('price'),
+            'company_id' => $request->get('company_id')
+        ]);
+
+//        $product->properties()->delete();
+//        $product->properties()->attach($properties);
+
+        return redirect()->back();
     }
 
     public function destroy(Product $product)

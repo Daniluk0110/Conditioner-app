@@ -37,9 +37,36 @@
                                         <td>{{ $product->name }}</td>
                                     </tr>
                                     <tr>
+                                        <td>Компания</td>
+                                        <td>{{ $product->company }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Цена</td>
+                                        <td>{{ $product->usd_price }}$</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Наличие</td>
+                                        <td>{{ $product->stock }}</td>
+                                    </tr>
+                                    <tr>
                                         <td>Описание</td>
                                         <td>{!! $product->description !!}</td>
                                     </tr>
+                                    <tr>
+                                        <td>Картинка</td>
+                                        <td><img class="img-fluid img"
+                                                 src="{{ asset('storage/' . $product->preview_image) }}" alt=""></td>
+                                    </tr>
+                                    <br>
+                                    <tr>
+                                        <td><span>Свойства:</span></td>
+                                    </tr>
+                                    @foreach($properties as $property)
+                                        <tr>
+                                            <td>{{ $property->name }}</td>
+                                            <td>{{ $property->value }}</td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
