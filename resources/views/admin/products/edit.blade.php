@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="row m-2">
-                            <div class="col-1">
+                            <div class="col-12">
                                 <div class="form-group">
                                     <label>Наличие</label>
                                     <div class="form-check">
@@ -57,7 +57,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12">
                                 <div class="form-group">
                                     <label>Компания</label>
                                     <select name="company_id" class="form-control" required>
@@ -73,7 +73,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-12">
                                 <div class="form-group">
                                     <label>Загрузка превью изображения</label>
                                     <div class="input-group">
