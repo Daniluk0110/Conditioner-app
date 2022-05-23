@@ -26,35 +26,7 @@
                 </div>
             </div>
             <div class="row mt-4">
-                <h3>Описание:</h3>
-                <div class="col-12">
-                    <table class="table">
-                        <thead class="thead-light">
-                        <tr>
-                            <th colspan="2">Общая информация</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>Дата выхода на рынок</td>
-                            <td>1</td>
-                        </tr>
-                        <thead class="thead-light">
-                        <tr>
-                            <th colspan="2">Основные</th>
-                        </tr>
-                        </thead>
-                        <tr>
-                            <td>Тип кондиционера </td>
-                            <td>Larry</td>
-                        </tr>
-                        <tr>
-                            <td>Тип внутреннего блока</td>
-                            <td>Larry</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                @include('website.includes.product_detail_table')
             </div>
         </div>
     </div>
