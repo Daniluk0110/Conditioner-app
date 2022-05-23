@@ -71,7 +71,9 @@
                                                 <td>{{ $product->id }}</td>
                                                 <td>{{ $product->name }}</td>
                                                 <td>{{ $product->usd_price }}</td>
-                                                <td><img class="img-fluid img" src="{{ asset('storage/' . $product->preview_image) }}" alt=""></td>
+                                                <td><img class="img-fluid img"
+                                                         src="{{ asset('storage/' . $product->preview_image) }}" alt="">
+                                                </td>
                                                 <td>{!! $product->description !!}</td>
                                                 <td>{{ $product->updated_at }}</td>
                                                 <td>
