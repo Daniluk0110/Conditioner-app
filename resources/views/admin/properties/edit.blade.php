@@ -60,6 +60,16 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
+                                    <label>Тег</label>
+                                    <input name="tag" type="text" class="form-control"
+                                           value="{{ $property->tag }}" placeholder="Введите имя тега">
+                                    @error('tag')
+                                    <div class="text-danger">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
                                     <label>Описание свойства</label>
                                     <textarea id="summernote" name="description">{{ $property->description }}</textarea>
                                 </div>

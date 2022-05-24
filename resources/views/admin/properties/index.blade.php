@@ -57,6 +57,9 @@
                                             <th class="sorting sorting_asc">
                                                 Сортировка
                                             </th>
+                                            <th class="sorting sorting_asc">
+                                                Тег
+                                            </th>
                                             <th class="sorting">
                                                 Описание
                                             </th>
@@ -72,6 +75,7 @@
                                                 <td>{{ $property->name }}</td>
                                                 <td>{{ $property->slag }}</td>
                                                 <td>{{ $property->sort }}</td>
+                                                <td>{{ $property->tag }}</td>
                                                 <td>{!! $property->description !!}</td>
                                                 <td>{{ $property->updated_at }}</td>
                                                 <td>

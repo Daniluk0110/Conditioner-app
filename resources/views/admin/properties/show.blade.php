@@ -45,6 +45,10 @@
                                         <td>{{ $property->sort }}</td>
                                     </tr>
                                     <tr>
+                                        <td>Тег</td>
+                                        <td>{{ $property->tag }}</td>
+                                    </tr>
+                                    <tr>
                                         <td>Описание</td>
                                         <td>{!! $property->description !!}</td>
                                     </tr>

@@ -46,6 +46,13 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label>Тег</label>
+                                <input name="tag" type="text" class="form-control" placeholder="Введите имя тега" value="{{ old('tag') }}">
+                                @error('tag')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label>Описание свойства</label>
                                 <textarea id="summernote" name="description">{{ old('description') }}</textarea>
                                 @error('description')
