@@ -30,6 +30,7 @@ class ProductAdminController extends Controller
         \Storage::put('public/images/', $request['preview_image']);
         $imagePath = \Storage::put('images/', $request['preview_image']);
         $properties = $request->get('property_ids');
+        $smallDescription = '';
 
         Product::firstOrCreate([
             'name' => $request->get('name'),
