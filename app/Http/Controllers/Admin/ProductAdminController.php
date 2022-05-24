@@ -94,8 +94,8 @@ class ProductAdminController extends Controller
             'company_id' => $request->get('company_id')
         ]);
 
-//        $product->properties()->delete();
-//        $product->properties()->attach($properties);
+        $product->properties()->detach();
+        $product->properties()->attach($properties);
 
         return redirect()->back();
     }
@@ -103,6 +103,6 @@ class ProductAdminController extends Controller
     public function destroy(Product $product)
     {
         $product->delete();
-        return redirect('admin.products.index');
+        return redirect()->back();
     }
 }
