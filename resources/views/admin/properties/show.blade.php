@@ -41,6 +41,10 @@
                                         <td>{{ $property->slag }}</td>
                                     </tr>
                                     <tr>
+                                        <td>Сортировка</td>
+                                        <td>{{ $property->sort }}</td>
+                                    </tr>
+                                    <tr>
                                         <td>Описание</td>
                                         <td>{!! $property->description !!}</td>
                                     </tr>

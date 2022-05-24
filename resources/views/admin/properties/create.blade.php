@@ -39,6 +39,13 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label>Сортировка</label>
+                                <input name="sort" type="text" class="form-control" placeholder="Введите символьный код" value="{{ old('sort') ? old('sort') : 500 }}">
+                                @error('sort')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label>Описание свойства</label>
                                 <textarea id="summernote" name="description">{{ old('description') }}</textarea>
                                 @error('description')

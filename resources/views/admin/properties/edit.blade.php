@@ -50,6 +50,16 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
+                                    <label>Сортировка</label>
+                                    <input name="sort" type="text" class="form-control"
+                                           value="{{ $property->sort }}" placeholder="Введите сортировку">
+                                    @error('sort')
+                                    <div class="text-danger">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
                                     <label>Описание свойства</label>
                                     <textarea id="summernote" name="description">{{ $property->description }}</textarea>
                                 </div>

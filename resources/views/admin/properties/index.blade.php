@@ -54,6 +54,9 @@
                                             <th class="sorting sorting_asc">
                                                 Символьный код
                                             </th>
+                                            <th class="sorting sorting_asc">
+                                                Сортировка
+                                            </th>
                                             <th class="sorting">
                                                 Описание
                                             </th>
@@ -68,6 +71,7 @@
                                                 <td>{{ $property->id }}</td>
                                                 <td>{{ $property->name }}</td>
                                                 <td>{{ $property->slag }}</td>
+                                                <td>{{ $property->sort }}</td>
                                                 <td>{!! $property->description !!}</td>
                                                 <td>{{ $property->updated_at }}</td>
                                                 <td>
