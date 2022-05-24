@@ -19,10 +19,14 @@
                 </div>
                 <div class="col-md-6">
                     <h2 class="text-black">{{ $product->name }}</h2>
+                    <p><strong class="text-primary h4">{{ $product->rubel_price }} BYN</strong></p>
+                    <br>
                     {!! $product->description !!}
 
-                    <p><strong class="text-primary h4">${{ $product->usd_price }}</strong></p>
-                    <p><a href="cart.html" class="buy-now btn btn-sm btn-primary">Add To Cart</a></p>
+                    <p><a href="tel:375299400287" class="buy-now btn btn-sm btn-primary">A1
+                            <span>+375 (29) 940-02-87</span></a></p>
+                    <p><a href="tel:375297230016" class="buy-now btn btn-sm btn-primary">MTS
+                            <span>+375 (29) 723-00-16</span></a></p>
 
                 </div>
             </div>

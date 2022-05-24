@@ -20,4 +20,10 @@ class Product extends Model
     {
         return $this->belongsToMany(Property::class);
     }
+
+    public function getRubelPriceAttribute(): string
+    {
+        $rubelExchangeRate = ExchangeRate::where('currency', 'BYN')->first();
+        return number_format($this->usd_price * $rubelExchangeRate->value, 2, '.', ' ');
+    }
 }

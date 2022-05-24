@@ -27,7 +27,7 @@
                                 </figure>
                                 <div class="block-4-text p-4">
                                     <h3><a href="/products/{{ $product->id }}">{{ $product->name }}</a></h3>
-                                    <p class="text-primary font-weight-bold">${{ $product->usd_price }}</p>
+                                    <p class="text-primary font-weight-bold">{{ $product->rubel_price }} BYN</p>
                                     <p class="mb-0">Finding perfect products</p>
                                 </div>
                             </div>
