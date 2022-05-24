@@ -32,6 +32,13 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label>Символьный код</label>
+                                <input name="slag" type="text" class="form-control" placeholder="Введите символьный код" value="{{ old('slag') }}">
+                                @error('slag')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label>Описание свойства</label>
                                 <textarea id="summernote" name="description">{{ old('description') }}</textarea>
                                 @error('description')

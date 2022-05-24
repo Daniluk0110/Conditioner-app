@@ -21,7 +21,7 @@
                 <!-- Main row -->
                 <div class="row">
                     <div class="col-4">
-                        <a href="/admin/properties/create" class="btn btn-block btn-primary">Add new property</a>
+                        <a href="/admin/properties/create" class="btn btn-block btn-primary">Добавить свойство</a>
                     </div>
                 </div>
                 <!-- /.row (main row) -->
@@ -51,6 +51,9 @@
                                             <th class="sorting sorting_asc">
                                                 Название
                                             </th>
+                                            <th class="sorting sorting_asc">
+                                                Символьный код
+                                            </th>
                                             <th class="sorting">
                                                 Описание
                                             </th>
@@ -64,6 +67,7 @@
                                             <tr class="odd">
                                                 <td>{{ $property->id }}</td>
                                                 <td>{{ $property->name }}</td>
+                                                <td>{{ $property->slag }}</td>
                                                 <td>{!! $property->description !!}</td>
                                                 <td>{{ $property->updated_at }}</td>
                                                 <td>
