@@ -24,6 +24,9 @@ class PropertyAdminController extends Controller
     {
         Property::firstOrCreate([
             'name' => $request->get('name'),
+            'slag' => $request->get('slag'),
+            'sort' => $request->get('sort'),
+            'tag' => $request->get('tag'),
             'description' => $request->get('description') ?: null,
         ]);
 
