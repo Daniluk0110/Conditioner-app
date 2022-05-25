@@ -43,7 +43,7 @@
                     <a href="/"><img src="{{ asset('website/images/logo-black.png') }}" alt="logo"></a>
                 </li>
                 <li><a href="/">Главная</a></li>
-{{--                <li><a href="/products">Кондиционеры</a></li>--}}
+                <li><a href="/products">Кондиционеры</a></li>
                 <li><a href="/prices">Монтаж</a></li>
                 <li><a href="/about">О нас</a></li>
             </ul>
