@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="row mt-4">
-                @include('website.includes.product_detail_table')
+                @include('website.includes.product_detail_properties_table')
             </div>
         </div>
     </div>

@@ -46,7 +46,7 @@ class CompanyAdminController extends Controller
     public function update(CompanyRequest $request, Company $company)
     {
         $company->update($request->all());
-        return view('admin.company.edit', compact('company'));
+        return redirect()->back();
     }
 
     public function destroy(Company $company)
