@@ -7,10 +7,10 @@
         </tr>
         </thead>
         @foreach($properties as $property)
-            @if($property->tag == 'general_information')
+            @if($property['tag'] == 'general_information')
                 <tr>
-                    <td>{{ $property->name }}</td>
-                    <td>{{ $property->value }}</td>
+                    <td>{{ $property['name'] }}</td>
+                    <td>{{ $property['value'] }}</td>
                 </tr>
             @endif
         @endforeach
@@ -20,10 +20,10 @@
         </tr>
         </thead>
         @foreach($properties as $property)
-            @if($property->tag == 'main')
+            @if($property['tag'] == 'main')
                 <tr>
-                    <td>{{ $property->name }}</td>
-                    <td>{{ $property->value }}</td>
+                    <td>{{ $property['name'] }}</td>
+                    <td>{{ $property['value'] }}</td>
                 </tr>
             @endif
         @endforeach
@@ -33,10 +33,10 @@
         </tr>
         </thead>
         @foreach($properties as $property)
-            @if($property->tag == 'construction')
+            @if($property['tag'] == 'construction')
                 <tr>
-                    <td>{{ $property->name }}</td>
-                    <td>{{ $property->value }}</td>
+                    <td>{{ $property['name'] }}</td>
+                    <td>{{ $property['value'] }}</td>
                 </tr>
             @endif
         @endforeach
@@ -46,10 +46,10 @@
         </tr>
         </thead>
         @foreach($properties as $property)
-            @if($property->tag == 'performance_and_energy_efficiency')
+            @if($property['tag'] == 'performance_and_energy_efficiency')
                 <tr>
-                    <td>{{ $property->name }}</td>
-                    <td>{{ $property->value }}</td>
+                    <td>{{ $property['name'] }}</td>
+                    <td>{{ $property['value'] }}</td>
                 </tr>
             @endif
         @endforeach
@@ -59,10 +59,10 @@
         </tr>
         </thead>
         @foreach($properties as $property)
-            @if($property->tag == 'control_and_indication')
+            @if($property['tag'] == 'control_and_indication')
                 <tr>
-                    <td>{{ $property->name }}</td>
-                    <td>{{ $property->value }}</td>
+                    <td>{{ $property['name'] }}</td>
+                    <td>{{ $property['value'] }}</td>
                 </tr>
             @endif
         @endforeach
@@ -72,10 +72,10 @@
         </tr>
         </thead>
         @foreach($properties as $property)
-            @if($property->tag == 'noise')
+            @if($property['tag'] == 'noise')
                 <tr>
-                    <td>{{ $property->name }}</td>
-                    <td>{{ $property->value }}</td>
+                    <td>{{ $property['name'] }}</td>
+                    <td>{{ $property['value'] }}</td>
                 </tr>
             @endif
         @endforeach
@@ -85,10 +85,10 @@
         </tr>
         </thead>
         @foreach($properties as $property)
-            @if($property->tag == 'air_cleaning')
+            @if($property['tag'] == 'air_cleaning')
                 <tr>
-                    <td>{{ $property->name }}</td>
-                    <td>{{ $property->value }}</td>
+                    <td>{{ $property['name'] }}</td>
+                    <td>{{ $property['value'] }}</td>
                 </tr>
             @endif
         @endforeach
@@ -98,10 +98,10 @@
         </tr>
         </thead>
         @foreach($properties as $property)
-            @if($property->tag == 'dimensions')
+            @if($property['tag'] == 'dimensions')
                 <tr>
-                    <td>{{ $property->name }}</td>
-                    <td>{{ $property->value }}</td>
+                    <td>{{ $property['name'] }}</td>
+                    <td>{{ $property['value'] }}</td>
                 </tr>
             @endif
         @endforeach

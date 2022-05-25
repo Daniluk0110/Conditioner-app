@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\ProductProperty;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -15,7 +16,14 @@ class ProductController extends Controller
 
     public function show(Product $product)
     {
-        $properties = $product->properties;
+        $properties = $product->properties->toArray();
+
+        foreach ($properties as $key => $property) {
+            $properties[$key]['value'] = ProductProperty::where('product_id', $property['pivot']['product_id'])
+                ->where('property_id', $property['pivot']['property_id'])
+                ->first()
+                ->value;
+        }
         return view('website.product_detail', compact('product', 'properties'));
     }
 }

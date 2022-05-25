@@ -9,5 +9,12 @@ class ProductProperty extends Model
 {
     use HasFactory;
 
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'product_property';
+
     protected $guarded = ['id'];
 }
